@@ -1,0 +1,629 @@
+{
+	"info": {
+		"_postman_id": "fee6ffaf-4da5-4fdd-a919-279faefaa899",
+		"name": "Alquiler_Autos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23176952",
+		"_collection_link": "https://cloudy-space-116545.postman.co/workspace/NODE~8bb5af6f-a170-4219-9884-26a2cce66d83/collection/23176952-fee6ffaf-4da5-4fdd-a919-279faefaa899?action=share&source=collection_link&creator=23176952"
+	},
+	"item": [
+		{
+			"name": "endpoint2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint2",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint3",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint4",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint5",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint5"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint6/2",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint6",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint7",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint7",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint8",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint8",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint9",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint9/1",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint9",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint10/12345678",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint10",
+						"12345678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint11",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint11",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint12",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint12",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint13",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint13",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint14",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint14",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint15",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint15",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint16",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint16",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint17",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint17",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint18",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint18",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint19",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint19",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint20",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"78901234C\",\r\n    \"password\": \"ana123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint20",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endpoint21",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTBjMjRiMzlhN2ExNDg5MTU1M2NhZjEiLCJpYXQiOjE2OTU0Mzc4MTIsImV4cCI6MTY5NTQ1MjIxMn0.SldBtlMHBIHosE15IMLpVGzFaz2cRSvOoxGhFTeQpkM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6996/api/alquiler/endpoint21",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"api",
+						"alquiler",
+						"endpoint21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6996/crud/cliente/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"crud",
+						"cliente",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertDataCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:6996/crud/cliente/insertData",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"crud",
+						"cliente",
+						"insertData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:6996/crud/cliente/delete/650e6c9dc94d9b1b42ff35ab",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"crud",
+						"cliente",
+						"delete",
+						"650e6c9dc94d9b1b42ff35ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:6996/crud/cliente/update/650c24199a7a14891553caec",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"crud",
+						"cliente",
+						"update",
+						"650c24199a7a14891553caec"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
