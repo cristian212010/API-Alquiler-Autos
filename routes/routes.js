@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { MongoClient } from 'mongodb';
+import generateJWT from '../helpers/generateJWT.js';
+import validateToken from '../middleware/validateToken.js';
 
 dotenv.config();
 
@@ -16,10 +18,10 @@ const Sucursal = db.collection('sucursal');
 const Sucursal_automovil = db.collection('sucursal_automovil');
 
 // 2. Mostrar todos los clientes registrados en la base de datos.
-router.get('/endpoint2', async (req, res) =>{
+router.get('/endpoint2', validateToken , async (req, res) => {
     try {
         await client.connect();
-        const result = await Cliente.find().toArray(); 
+        const result = await Cliente.find().toArray();
         res.json(result);
         client.close();
     } catch (error) {
@@ -27,8 +29,9 @@ router.get('/endpoint2', async (req, res) =>{
     }
 });
 
+
 // 3. Obtener todos los automóviles disponibles para alquiler.
-router.get('/endpoint3', async (req, res) =>{
+router.get('/endpoint3', validateToken , async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.aggregate([
@@ -58,7 +61,7 @@ router.get('/endpoint3', async (req, res) =>{
 });
 
 // 4. Listar todos los alquileres activos junto con los datos de los clientes relacionados.
-router.get('/endpoint4', async (req, res) =>{
+router.get('/endpoint4', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.aggregate([
@@ -83,8 +86,8 @@ router.get('/endpoint4', async (req, res) =>{
     }
 });
 
-// 5. Mostrar todas las reservas pendientes con los datos del cliente
-router.get('/endpoint5', async (req, res) =>{
+// 5. Mostrar todas las reservas pendientes con los datos del cliente y el automóvil reservado.
+router.get('/endpoint5', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Reserva.aggregate([
@@ -100,6 +103,14 @@ router.get('/endpoint5', async (req, res) =>{
                     foreignField: "ID_Cliente",
                     as: "cliente"
                 }
+            },
+            {
+                $lookup:{
+                    from: "automovil",
+                    localField: "ID_Automovil",
+                    foreignField: "ID_Automovil",
+                    as: "automovil"
+                }
             }
         ]).toArray(); 
         res.json(result);
@@ -110,7 +121,7 @@ router.get('/endpoint5', async (req, res) =>{
 });
 
 // 6. Obtener los detalles del alquiler con el ID_Alquiler específico.
-router.get('/endpoint6/:id', async (req, res) =>{
+router.get('/endpoint6/:id', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.find({ID_Alquiler: parseInt(req.params.id)}).toArray(); 
@@ -122,7 +133,7 @@ router.get('/endpoint6/:id', async (req, res) =>{
 });
 
 // 7. Listar los empleados con el cargo de "Vendedor".
-router.get('/endpoint7', async (req, res) =>{
+router.get('/endpoint7', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Empleado.find({Cargo: 'Vendedor'}).toArray(); 
@@ -134,7 +145,7 @@ router.get('/endpoint7', async (req, res) =>{
 });
 
 // 8. Mostrar la cantidad total de automóviles disponibles en cada sucursal.
-router.get('/endpoint8', async (req, res) =>{
+router.get('/endpoint8', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Sucursal_automovil.aggregate([
@@ -162,7 +173,7 @@ router.get('/endpoint8', async (req, res) =>{
 });
 
 // 9. Obtener el costo total de un alquiler específico.
-router.get('/endpoint9/:id', async (req, res) =>{
+router.get('/endpoint9/:id', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.aggregate([
@@ -187,7 +198,7 @@ router.get('/endpoint9/:id', async (req, res) =>{
 });
 
 // 10. Listar los clientes con el DNI específico.
-router.get('/endpoint10/:dni', async (req, res) =>{
+router.get('/endpoint10/:dni', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Cliente.find({DNI: req.params.dni}).toArray(); 
@@ -199,7 +210,7 @@ router.get('/endpoint10/:dni', async (req, res) =>{
 });
 
 // 11. Mostrar todos los automóviles con una capacidad mayor a 5 personas.
-router.get('/endpoint11', async (req, res) =>{
+router.get('/endpoint11', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Automovil.find({Capacidad: {$gt: 5}}).toArray(); 
@@ -211,7 +222,7 @@ router.get('/endpoint11', async (req, res) =>{
 });
 
 // 12. Obtener los detalles del alquiler que tiene fecha de inicio en '2023-07-05'.
-router.get('/endpoint12', async (req, res) =>{
+router.get('/endpoint12', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.find({Fecha_Inicio: '2023-07-05'}).toArray(); 
@@ -223,7 +234,7 @@ router.get('/endpoint12', async (req, res) =>{
 });
 
 // 13. Listar las reservas pendientes realizadas por un cliente específico.
-router.get('/endpoint13', async (req, res) =>{
+router.get('/endpoint13', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Reserva.find({$and: [{ID_Cliente: 1},{Estado:'Pendiente'}]}).toArray(); 
@@ -235,7 +246,7 @@ router.get('/endpoint13', async (req, res) =>{
 });
 
 // 14. Mostrar los empleados con cargo de "Gerente" o "Asistente".
-router.get('/endpoint14', async (req, res) =>{
+router.get('/endpoint14', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Empleado.find({$or: [{Cargo: 'Gerente'}, {Cargo: 'Asistente'}]}).toArray(); 
@@ -247,7 +258,7 @@ router.get('/endpoint14', async (req, res) =>{
 });
 
 // 15.Obtener los datos de los clientes que realizaron al menos un alquiler.
-router.get('/endpoint15', async (req, res) =>{
+router.get('/endpoint15', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.aggregate([
@@ -274,7 +285,7 @@ router.get('/endpoint15', async (req, res) =>{
 });
 
 // 16. Listar todos los automóviles ordenados por marca y modelo.
-router.get('/endpoint16', async (req, res) =>{
+router.get('/endpoint16', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Automovil.find().sort({Marca:1},{Modelo: 1}).toArray(); 
@@ -286,7 +297,7 @@ router.get('/endpoint16', async (req, res) =>{
 });
 
 // 17. Mostrar la cantidad total de automóviles en cada sucursal junto con su dirección.
-router.get('/endpoint17', async (req, res) =>{
+router.get('/endpoint17', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Sucursal.aggregate([
@@ -322,7 +333,7 @@ router.get('/endpoint17', async (req, res) =>{
 });
 
 // 18. Obtener la cantidad total de alquileres registrados en la base de datos.
-router.get('/endpoint18', async (req, res) =>{
+router.get('/endpoint18', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.countDocuments(); 
@@ -334,7 +345,7 @@ router.get('/endpoint18', async (req, res) =>{
 });
 
 // 19. Mostrar los automóviles con capacidad igual a 5 personas y que estén disponibles.
-router.get('/endpoint19', async (req, res) =>{
+router.get('/endpoint19', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.aggregate([
@@ -369,21 +380,28 @@ router.get('/endpoint19', async (req, res) =>{
     }
 });
 
-// 20. Obtener los datos del cliente que realizó la reservacion.
+// 20. Login
 router.get('/endpoint20', async (req, res) =>{
+    const {dni, password} = req.body;
     try {
         await client.connect();
-        const result = await Reserva.aggregate([
-            {
-                $lookup:{
-                    from: "cliente",
-                    localField: "ID_Cliente",
-                    foreignField: "ID_Cliente",
-                    as: "Cliente"
-                }
-            }
-        ]).toArray(); 
-        res.json(result);
+        const result = await Empleado.find({DNI:dni}).toArray();
+        if (result.length === 0) {
+            console.log('entro');
+            return res.status(400).json({
+                msg:"Usuario no es correcto"
+            })
+        }
+        if (result[0].Password !== password) {
+            return res.status(400).json({
+                msg: "Contraseña incorrecta"
+            });
+        }
+        const token = await generateJWT(result[0]._id);
+        res.json({
+            result,
+            token
+        });
         client.close();
     } catch (error) {
         res.status(404).json({message: error.message});
@@ -391,7 +409,7 @@ router.get('/endpoint20', async (req, res) =>{
 });
 
 // 21. Listar los alquileres con fecha de inicio entre '2023-07-05' y '2023-07-10'.
-router.get('/endpoint21', async (req, res) =>{
+router.get('/endpoint21', validateToken, async (req, res) =>{
     try {
         await client.connect();
         const result = await Alquiler.find({$and: [{Fecha_Inicio: {$gte: '2023-07-05'}},{Fecha_Inicio: {$lte: '2023-07-10'}}]}).toArray(); 
