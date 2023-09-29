@@ -7,7 +7,7 @@ dotenv.config();
 const router = express.Router();
 const client = new MongoClient(process.env.DDBB);
 const db = client.db('AlquilerAutos');
-const SucursalAutomovil = db.collection('sucursal_automovil'); // Cambiamos el nombre de la colección a "sucursal_automovil"
+const SucursalAutomovil = db.collection('sucursal_automovil');
 
 router.get('/getAll', async (req, res) => {
     try {
@@ -39,6 +39,7 @@ router.post('/insertData', async (req, res) => {
 
 router.delete('/delete/:id', async (req, res) => {
     try {
+        await client.connect();
         const id = req.params.id;
         const response = await SucursalAutomovil.deleteOne({ _id: new ObjectId(id) });
         res.json(response);
@@ -51,6 +52,7 @@ router.delete('/delete/:id', async (req, res) => {
 
 router.put('/update/:id', async (req, res) => {
     try {
+        await client.connect();
         const data = req.body;
         const id = req.params.id;
         await SucursalAutomovil.findOneAndUpdate({ _id: new ObjectId(id) }, { $set: data });

@@ -37,9 +37,11 @@ router.post('/insertData' , async (req, res) => {
 
 router.delete('/delete/:id', async (req, res) => {
     try {
+        await client.connect();
         const id = req.params.id;
         const response = await Cliente.deleteOne({_id: new ObjectId(id)})
         res.json(response)
+        client.close();
     } catch (error) {
         res.status(404).json({message: error.message});
     }
@@ -47,10 +49,12 @@ router.delete('/delete/:id', async (req, res) => {
 
 router.put('/update/:id', async (req, res) => {
     try {
+        await client.connect();
         const data = req.body;
         const id = req.params.id;
         await Cliente.findOneAndUpdate({ _id: new ObjectId(id) }, { $set: data });
         res.send(data)
+        client.close();
     } catch (error) {
         res.status(404).json({message: error.message});
     }
